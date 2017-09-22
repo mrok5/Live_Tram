@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+<html onselectstart="return false;" style="-ms-user-select: none;">
+<head>
+    <title>index</title>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/w3.css">
+    <link rel="stylesheet" href="css/w3-theme-teal.css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <script src="js/addYourLocationButton.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/calc_dist.js"></script>
+    <link rel="stylesheet" href="select.css">
+</head>
+
+<body>
+
+    <nav class="w3-sidenav w3-card-2 w3-white w3-top" style="width:34%;display:none;z-index:2" id="mySidenav">
+        <div class="w3-container w3-theme-d2">
+            <span onclick="w3_close()" class="w3-closenav w3-left w3-xlarge">x</span>
+            <br>
+            <div class="w3-padding w3-center">
+                <img src="images/logo.png" style="width:100%">
+            </div>
+        </div>
+        <br>
+
+        <a href="legenda.html">Legenda</a>
+        <a href="info.html">Informacje</a>
+        <br/><br/>
+        <a onclick="w3_close()"><i class="w3-opennav fa fa-arrow-left"></i> &nbsp; Zamknij</a>
+        
+    </nav>
+
+    <header id="head" class="w3-container w3-card-4 w3-theme w3-top">
+        <h2>
+            <i class="w3-opennav fa fa-bars" onclick="w3_open()"></i>
+            <a style="margin-left:5%">Live Tram</a>
+        </h2>
+    </header>
+    <div id="alert" title="Alert">
+        <p><span class="ui-icon ui-icon-alert" style="float:left; margin: 3px 12px 20px 0;"></span> No internet connection!</p>
+    </div>
+    <div id="info" title="Info">
+        <p>Strzałki pokazujące kierunki jazdy tramwajów pojawią się po około 30sek.</p>
+    </div>
+    <!--mapa here-->
+    <div id="map"></div>
+    
+
+    <!--
+        <footer class="w3-container w3-theme w3-bottom">
+            <h3 style="text-align:center">&copy; 2016 Marek Słowik</h3>
+        </footer>
+    -->
+    <script>
+        function w3_open() {
+            document.getElementById("mySidenav").style.display = "block";
+            document.getElementById("head").style.display = "none";
+        }
+
+        function w3_close() {
+            document.getElementById("mySidenav").style.display = "none";
+            document.getElementById("head").style.display = "block";
+        }
+    </script>
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWTqyowyb7yCdV7wTD4o6F0hbbwJtMJhM&callback=initMap">
+    </script>
+    <script>
+        $("#alert").dialog({
+            autoOpen: false
+        });
+
+        $("#info").dialog({
+            modal: true,
+            autoOpen: false,
+            hide: { effect: "explode", duration: 1000 }
+        });
+
+    </script>
+</body>
+
+</html>

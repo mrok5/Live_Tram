@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html onselectstart="return false;" style="-ms-user-select: none;">
+<head>
+    <title>legenda</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/w3.css">
+    <link rel="stylesheet" href="css/w3-theme-teal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+</head>
+<body style="max-width:1080px;">
+
+    <header class="w3-container w3-card-4 w3-theme w3-top">
+        <h3 style="text-align:center">
+            <i class="w3-opennav fa fa-arrow-left" onclick="goBack()"></i>
+            <a style="margin-left:5%">Live Tram Warsaw</a>
+        </h3>
+    </header>
+
+    <div class="w3-container" style="margin-top:75px">
+
+        <div class="w3-row">
+            <div class="w3-col s3">
+                <img src="img/new.png" style="width:100%">
+            </div>
+            <div class="w3-col s9 w3-container">
+                <h3 class="w3-text-orange">Tramwaj Niskopodłogowy</h3>
+                <p>miejski pojazd szynowy, umożliwiający wejście osobom niepełnosprawnym oraz osobom prowadzącym wózki dziecięce.</p>
+            </div>
+        </div>
+        <hr>
+        <div class="w3-row">
+            <div class="w3-col s3">
+                <img src="img/old.png" style="width:100%">
+            </div>
+            <div class="w3-col s9 w3-container">
+                <h3 class="w3-text-blue">Tramwaj Wysokopodłogowy</h3>
+                <p>Miejski pojazd szynowy produkowany w XX wieku, nie przystosowany dla osób niepełnosprawnych </p>
+            </div>
+        </div>
+        <hr>
+    </div>
+
+    <footer class="w3-container w3-theme w3-bottom">
+        <p style="text-align:center">&copy; 2016 Marek Słowik</p>
+    </footer>
+
+    <script>
+    function goBack() {
+        window.history.back();
+    }
+    </script>
+
+</body>
+
+</html>
